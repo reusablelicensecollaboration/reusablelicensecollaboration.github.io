@@ -1,0 +1,168 @@
+.header1 {
+	background-color: #000000;
+	min-width: 100%;
+	max-width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#logo1 {
+	padding: 10px;
+	margin-left: 10%;
+	font-size: 26px;
+	background-color: #1D0A51;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#logo1:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#logo1:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#logo1:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+	background-color: #2E069B;
+}
+#logo1:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home {
+	padding: 5px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_home:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_home:hover {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+#link_home:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_about_us {
+	padding: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_about_us:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_about_us:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#link_about_us:hover {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+#link_about_us:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer1 {
+	background-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 5px;
+	border-top-color: #EEEEEE;
+	min-width: 100%;
+	max-width: 100%;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #000000;
+}
+#link_licensing {
+	padding: 5px;
+	margin-left: 10%;
+	margin-right: 10px;
+	font-size: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_licensing:link {
+  color: #666666;
+  text-decoration: none;
+}
+#link_licensing:visited {
+  color: #666666;
+  text-decoration: none;
+}
+#link_licensing:hover {
+  color: #111111;
+  text-decoration: none;
+}
+#link_licensing:active {
+  color: #666666;
+  text-decoration: none;
+}
+#link_terms_of_service {
+	padding: 5px;
+	margin-right: 10px;
+	font-size: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_terms_of_service:link {
+  color: #666666;
+  text-decoration: none;
+}
+#link_terms_of_service:visited {
+  color: #666666;
+  text-decoration: none;
+}
+#link_terms_of_service:hover {
+  color: #111111;
+  text-decoration: none;
+}
+#link_terms_of_service:active {
+  color: #666666;
+  text-decoration: none;
+}
+#link_privacy_policy {
+	padding: 5px;
+	margin-right: 10px;
+	font-size: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+}
+#link_privacy_policy:link {
+  color: #666666;
+  text-decoration: none;
+}
+#link_privacy_policy:visited {
+  color: #666666;
+  text-decoration: none;
+}
+#link_privacy_policy:hover {
+  color: #111111;
+  text-decoration: none;
+}
+#link_privacy_policy:active {
+  color: #666666;
+  text-decoration: none;
+}
