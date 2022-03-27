@@ -1,0 +1,116 @@
+body {
+	font-size: 16px;
+    color: #000000;
+    font-family: sans-serif;
+    margin: 0px;
+}
+h1 {
+	color: #111111;
+    font-size: 32px;
+    font-weight: 200;
+}
+h2 {
+	color: #8a7474;
+    font-size: 20px;
+    font-weight: 900;
+}
+h3 {
+	color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+dd {
+	display: inline;
+    margin: 0px;
+}
+dt {
+	display: inline;
+}
+.type_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: #b7b7b7;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #717171;
+}
+.type_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: #e6e6e6;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #cecece;
+}
+.features_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: #50d550;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0c8a1a;
+}
+.features_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: #e18484;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ca1a1a;
+}
+.permissions_true {
+	display: inline-block;
+    padding: 10px;
+    background-color: #50d550;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0c8a1a;
+}
+.permissions_false {
+	display: inline-block;
+    padding: 10px;
+    background-color: #e18484;
+    margin-right: 5px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ca1a1a;
+}
+li {
+	margin-bottom: 5px;
+}
+.document {
+	background-color: #F0E4C8;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+.download_button {
+	display: inline-block;
+	background-color: #CCCCCC;
+	padding: 10px;
+}
+#content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	max-width: 80%;
+	min-width: 80%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
