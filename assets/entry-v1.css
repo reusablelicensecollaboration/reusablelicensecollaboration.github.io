@@ -100,9 +100,34 @@ li {
 	padding: 10px;
 }
 .download_button {
-	display: inline-block;
-	background-color: #CCCCCC;
+	
+}
+#download_button {
 	padding: 10px;
+	font-size: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	font-family: sans-serif;
+	background-color: #CCCCCC;
+	border-bottom-color: #666666;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+#download_button:link {
+  color: #111111;
+  text-decoration: none;
+}
+#download_button:visited {
+  color: #111111;
+  text-decoration: none;
+}
+#download_button:hover {
+  color: #111111;
+  text-decoration: none;
+}
+#download_button:active {
+  color: #111111;
+  text-decoration: none;
 }
 #content {
 	margin-left: auto;
