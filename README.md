@@ -1,4 +1,4 @@
 # reusablelicensecollaboration.github.io
-Our website, and main repository.
+The core of our website.
 
 Viewable at: https://reusablelicensecollaboration.github.io/
