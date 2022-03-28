@@ -177,3 +177,14 @@ h1 {
   color: #666666;
   text-decoration: none;
 }
+#content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	max-width: 80%;
+	min-width: 80%;
+	min-height: 50%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
