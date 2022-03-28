@@ -1,3 +1,14 @@
+body {
+	font-size: 16px;
+    	color: #000000;
+    	font-family: sans-serif;
+   	margin: 0px;
+}
+h1 {
+	color: #111111;
+    	font-size: 32px;
+   	font-weight: 200;
+}
 .header1 {
 	background-color: #000000;
 	min-width: 100%;
