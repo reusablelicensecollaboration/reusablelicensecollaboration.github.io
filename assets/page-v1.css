@@ -4,24 +4,24 @@ body {
     	font-family: sans-serif;
    	margin: 0px;
 }
-.default_links {
+a.default_links {
 	color: #181a9b;
 	font-size: 16px;
 	font-family: sans-serif;
 }
-.default_links:link {
+a.default_links:link {
 	color: #181a9b;
  	text-decoration: none;
 }
-.default_links:visited {
+a.default_links:visited {
 	color: #181a9b;
   text-decoration: none;
 }
-.default_links:hover {
+a.default_links:hover {
 	color: #181a9b;
   text-decoration: none;
 }
-.default_links:active {
+a.default_links:active {
 	color: #181a9b;
   text-decoration: none;
 }
