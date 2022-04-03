@@ -1,0 +1,12 @@
+//Database:Content
+//Description:This database contains a list of pages, posts, and licenses on the site. It is used by the site to generate a list in HTML format. This file is manually created, so all new content added to the site must also be added here to show up on the main page.
+//Formatting:This database contains 3 fields: title, type (e.g., page, post, license), and url (it can be relative, or complete). Each field is separated by a "|".
+//Content:stopsign18348495
+Home|page|/
+About Us|page|/pages/about-us.html
+Licensing|page|/pages/licensing.html
+Privacy Policy|page|/pages/privacy-policy.html
+Terms of Service|page|/pages/terms-of-service.html
+Types of Licenses|post|/posts/types-of-licenses.html
+Example License v1|license|/example-license-v1
+//stopsign18348495
