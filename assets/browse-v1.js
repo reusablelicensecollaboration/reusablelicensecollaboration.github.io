@@ -36,10 +36,10 @@ function create_content_list (quantity, page_number, keywords, types) {
 	file_contents.open("GET", window.database_file_path, true);
 	file_contents.responseType = 'text';
 	file_contents.send();
-	var database = database_contents;
 
-
-	var database = database.split('\n');
+	var database = window.database_contents.split('\n');
+	console.log(database);
+	
 	//Filter list (starting from the offset, find the first $quantity results which contain the keywords, and match any of the selected types)
 	window.database_results = '';
 	database.forEach(check_keywords_and_types);
