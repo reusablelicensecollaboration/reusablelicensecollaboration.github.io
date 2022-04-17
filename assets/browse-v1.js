@@ -31,6 +31,7 @@ function create_content_list (quantity, page_number, keywords, types) {
 	var file_contents = new XMLHttpRequest();
 	file_contents.onload = function(){
    		 window.database_contents = this.responseText;
+		console.log(window.database_contents);
 	}
 	file_contents.open("GET", window.database_file_path, true);
 	file_contents.responseType = 'text';
