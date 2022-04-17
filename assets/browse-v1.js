@@ -1,3 +1,12 @@
+//Fetch database
+window.database_file_path = '/databases/content.txt';
+var file_contents = new XMLHttpRequest();
+file_contents.onload = function(){
+   window.database_contents = this.responseText;
+}
+file_contents.open("GET", window.database_file_path, true);
+file_contents.responseType = 'text';
+file_contents.send();
 //Get filters (e.g., keywords, content types, page_number, quantity) from url parameters
 var url = window.location.href;
 var filter_keywords = url.replace(/.*keywords=/, "");
@@ -27,15 +36,6 @@ function create_content_list (quantity, page_number, keywords, types) {
 	//Read database text file to get list of posts, and pages
 	///var database = 'Test Post 1|/post1.html|post\nTest Post 2|/post2.html|post\nTest Page 1|/page1.html|page';
 
-	window.database_file_path = '/databases/content.txt';
-	var file_contents = new XMLHttpRequest();
-	var database_contents = '';
-	file_contents.onload = function(){
-   		 window.database_contents = this.responseText;
-	}
-	file_contents.open("GET", window.database_file_path, true);
-	file_contents.responseType = 'text';
-	file_contents.send();
 
 	var database = window.database_contents.split('\n');
 	console.log(database);
