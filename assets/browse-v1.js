@@ -36,7 +36,7 @@ function create_content_list (quantity, page_number, keywords, types) {
 	file_contents.open("GET", window.database_file_path, true);
 	file_contents.responseType = 'text';
 	file_contents.send();
-	var database = window.database_contents;
+	var database = database_contents;
 
 
 	var database = database.split('\n');
