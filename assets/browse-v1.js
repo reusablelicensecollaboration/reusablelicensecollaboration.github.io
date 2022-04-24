@@ -6,6 +6,7 @@ file_contents.onload = function(){
 	window.database_contents = this.responseText;
 	//Get filters (e.g., keywords, content types, page_number, quantity) from url parameters. Or set default values.
 	var url = window.location.href;
+	var url = decodeURIComponent(url);
 	var filter_keywords = url.replace(/.*keywords=/, "");
 	var filter_keywords = filter_keywords.replace(/&.*/, "");
 	var filter_keywords = filter_keywords.replace(/=.*/, "");
