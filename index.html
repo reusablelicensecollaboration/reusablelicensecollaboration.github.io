@@ -46,6 +46,35 @@
 	min-width: 100%;
 	background-color: #b1b2dd;
 }
+#filters_bar {
+	background-color: #FFFFFF;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom-style: dotted;
+	border-bottom-width: 3px;
+	border-bottom-color: #CCCCCC;
+}
+.form_button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #CCCCCC;
+	border-width: 0px;
+	margin-top: 10px;
+}
+.checkboxes {
+	display: inline-block;
+}
+.checkboxes_labels {
+	margin-right: 20px;
+}
+#keywords {
+	min-width: calc(100% - 10px);
+	max-width: calc(100% - 10px);
+	padding: 5px;
+	font-size: 18px;
+}
 </style>
 </head>
 <body>
@@ -55,7 +84,28 @@
 
 </script>
 <div id='content'>
-<!-- This will contain a list of pages, articles (aka posts), and license repos (the licenses). There will be a filter by type option which uses javascript to hide unselected types. There will be a search field which allows hiding list entries which don't contain a particular set of keywords. All entries are clickable links to the appropriate html page. -->
+<div id='filters_bar'>
+<h4>Types:</h4>
+ <input type="checkbox" class='checkboxes' id="types_page" name="types_page" value="Page" checked>
+  <label class='checkboxes_labels' for="types_page">Page</label>
+  <input type="checkbox" class='checkboxes' id="types_post" name="types_post" value="Post" checked>
+  <label class='checkboxes_labels'for="types_page">Post</label>
+  <input type="checkbox" class='checkboxes' id="types_post" name="types_license" value="License" checked>
+  <label class='checkboxes_labels' for="types_page">License</label>
+
+<h4>Keywords:</h4>
+<form action="/index.html">
+  <input type="text" id='keywords' name="keywords" value=""><br>
+  
+  <input type="hidden" id="types" name="types" value='page,post,license'>
+  <input type="hidden" id="page" name="page" value="1">
+  <input type="hidden" id="quantity" name="quantity" value="1">
+  
+  <input class='form_button' type="submit" value="Filter">
+</form>
+</div>
+
+
 </div>
 <script src="/assets/browse-v1.js"></script>
 </body>
