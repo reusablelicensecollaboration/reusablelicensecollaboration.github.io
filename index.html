@@ -86,12 +86,12 @@
 <div id='content'>
 <div id='filters_bar'>
 <h4>Types:</h4>
- <input type="checkbox" class='checkboxes' id="types_page" name="types_page" value="Page" checked>
+ <input type="checkbox" class='checkboxes' id="types_page" name="types_page" value="Page">
   <label class='checkboxes_labels' for="types_page">Page</label>
   <input type="checkbox" class='checkboxes' id="types_post" name="types_post" value="Post" checked>
   <label class='checkboxes_labels'for="types_page">Post</label>
-  <input type="checkbox" class='checkboxes' id="types_post" name="types_license" value="License" checked>
-  <label class='checkboxes_labels' for="types_page">License</label>
+  <input type="checkbox" class='checkboxes' id="types_license" name="types_license" value="License" checked>
+  <label class='checkboxes_labels' for="types_license">License</label>
 
 <h4>Keywords:</h4>
 <form action="/index.html">
@@ -101,8 +101,85 @@
   <input type="hidden" id="page" name="page" value="1">
   <input type="hidden" id="quantity" name="quantity" value="1">
   
-  <input class='form_button' type="submit" value="Filter">
+  <input class='form_button' onclick="update_filter_form()" type="submit" value="Filter">
 </form>
+<script>
+//Checkbox defaults
+	var url = window.location.href;
+	var url = decodeURIComponent(url);
+	var filter_keywords = url.replace(/.*keywords=/, "");
+	var filter_keywords = filter_keywords.replace(/&.*/, "");
+	var filter_keywords = filter_keywords.replace(/=.*/, "");
+	if (url.includes("keywords=") === false) {
+		var filter_keywords = '';
+	}
+	document.getElementById("keywords").value = filter_keywords.replace(/,/g, " ");
+	var filter_types = url.replace(/.*types=/, "");
+	var filter_types = filter_types.replace(/&.*/, "");
+	var filter_types = filter_types.replace(/=.*/, "");
+	if (url.includes("types=") === false) {
+		var filter_types = 'post,license';
+	}
+	if (filter_types.includes("page") === true){
+		document.getElementById("types_page").checked = true;
+	} else {
+		document.getElementById("types_page").checked = false;
+	}
+	if (filter_types.includes("post") === true) {
+		document.getElementById("types_post").checked = true;
+	} else {
+		document.getElementById("types_post").checked = false;
+	}
+	if (filter_types.includes("license") === true) {
+		document.getElementById("types_license").checked = true;
+	} else {
+		document.getElementById("types_license").checked = false;
+	}
+	var filter_page_number = url.replace(/.*page=/, "");
+	var filter_page_number = filter_page_number.replace(/&.*/, "");
+	var filter_page_number = filter_page_number.replace(/=.*/, "");
+	if (url.includes("page=") === false) {
+		var filter_page_number = '1';
+	}
+	document.getElementById("page").value = filter_page_number;
+	var filter_quantity = url.replace(/.*quantity=/, "");
+	var filter_quantity = filter_quantity.replace(/&.*/, "");
+	var filter_quantity = filter_quantity.replace(/=.*/, "");
+	if (url.includes("quantity=") === false) {
+		var filter_quantity = '12';
+	}
+	document.getElementById("quantity").value = filter_quantity;
+function update_filter_form() {
+	//Checkboxes
+	var form_value = '';
+	var check_checkbox = document.getElementById("types_page").checked;
+	if (check_checkbox === true){
+		var form_value = "page";
+	}
+	var check_checkbox = document.getElementById("types_post").checked;
+	if (check_checkbox === true){
+		if (form_value === ''){
+			var form_value = "post";
+		} else {
+			var form_value = form_value.concat(',post');
+		}
+	}
+	var check_checkbox = document.getElementById("types_license").checked;
+	if (check_checkbox === true){
+		if (form_value === ''){
+			var form_value = "license";
+		} else {
+			var form_value = form_value.concat(',license');
+		}
+	}
+	if (form_value === ''){
+		var form_value = 'page,post,license';
+	}
+	document.getElementById("types").value = form_value;
+	//Keywords
+	document.getElementById("keywords").value = document.getElementById("keywords").value.replace(/ /g, ",");
+}
+</script>
 </div>
 
 
