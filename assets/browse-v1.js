@@ -17,7 +17,7 @@ file_contents.onload = function(){
 	var filter_types = filter_types.replace(/&.*/, "");
 	var filter_types = filter_types.replace(/=.*/, "");
 	if (url.includes("types=") === false) {
-		var filter_types = 'post,page,license';
+		var filter_types = 'post,license';
 	}
 	var filter_page_number = url.replace(/.*page=/, "");
 	var filter_page_number = filter_page_number.replace(/&.*/, "");
