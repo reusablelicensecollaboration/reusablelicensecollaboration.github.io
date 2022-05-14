@@ -14,6 +14,11 @@ h2 {
     font-size: 20px;
     font-weight: 900;
 }
+.soft_h2 {
+	color: #9d9d9d;
+	font-size: 16px;
+	font-weight: 900;
+}
 h3 {
 	color: #333333;
     font-size: 16px;
@@ -142,4 +147,23 @@ li {
 }
 .related_articles_list {
 	margin-left: 20px;
+}
+#meta_header {
+	margin-top: 50px;
+}
+.meta_list {
+	color: #9d9d9d;
+	font-size: 16px;
+	list-style-type: none;
+}
+.meta_sub_list {
+	margin-left: 20px;
+}
+.selectable_text {
+	display: inline-block;
+	background-color: #EEEEEE;
+	padding: 2px;
+}
+#inline_clipboard {
+	display: none;
 }
