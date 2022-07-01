@@ -198,6 +198,32 @@ h1 {
   color: #666666;
   text-decoration: none;
 }
+.footer2 {
+	background-color: #FFFFFF;
+	min-width: 100%;
+	max-width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	text-align: left;
+}
+#button_top_button {
+	border: none;
+	outline: none;
+	font-size: 44px;
+	line-height: 60px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #76e3f4;
+	border-radius: 35px;
+	margin-left: 10%;
+	min-width: 60px;
+	min-height: 60px;
+	text-align: center;
+}
+
 /* fix footer on mobile */
 @media only screen and (orientation: portrait) {
   .footer1 {
@@ -205,6 +231,12 @@ h1 {
   }
   #link_licensing {
   	margin-left: 0px;
+  }
+  #footer2 {
+	text-align: center;
+  }
+  #button_top_button {
+	margin-left: 0px;
   }
 }
 #content {
