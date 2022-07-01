@@ -9,15 +9,13 @@ h1 {
     font-size: 32px;
     font-weight: 200;
 }
+.h2_soft {
+	color: #bdb7b7;
+}
 h2 {
 	color: #8a7474;
     font-size: 20px;
     font-weight: 900;
-}
-.soft_h2 {
-	color: #9d9d9d;
-	font-size: 16px;
-	font-weight: 900;
 }
 h3 {
 	color: #333333;
@@ -152,7 +150,6 @@ li {
 	margin-top: 50px;
 }
 .meta_list {
-	color: #9d9d9d;
 	font-size: 16px;
 	list-style-type: none;
 }
