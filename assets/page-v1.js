@@ -73,4 +73,22 @@ function create_page_elements () {
 	link_privacy_policy.id = "link_privacy_policy";
 	//Add link_terms_of_service to DOM
 	document.getElementById('footer1').appendChild(link_privacy_policy);
+	
+	//Create the footer2
+	const footer2 = document.createElement("div");
+	//Add class
+	footer2.className = "footer2";
+	//Add ID
+	footer2.id = 'footer2'
+	//Add footer2 to DOM
+	document.body.appendChild(footer2);
+	
+	//Create button_top_button
+	const button_top_button = document.createElement("button");
+	button_top_button.addEventListener('click', function scroll_to_top() { document.body.scrollTop = 0; document.documentElement.scrollTop = 0;});
+	button_top_button.innerHTML = '&uArr;';
+	//Add ID
+	button_top_button.id = "button_top_button";
+	//Add link_terms_of_service to DOM
+	document.getElementById('footer2').appendChild(button_top_button);
 }
