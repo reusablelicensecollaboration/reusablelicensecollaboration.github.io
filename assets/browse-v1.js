@@ -93,11 +93,12 @@ document.body.onload = create_content_list(filter_quantity, filter_page_number, 
 		///Reduce list to specific offset, and quantity
 		if (filter_page_number === '1'){
 			var database_selection_point_1 = 0;
+			var database_selection_point_2 = parseInt(filter_quantity);
 		} else {
-			var database_selection_point_1 = parseInt(filter_page_number);
+			var database_selection_point_1 = parseInt(filter_page_number) - 1;
 			var database_selection_point_1 = database_selection_point_1 * parseInt(filter_quantity);
 		}
-		var database_selection_point_2 = parseInt(filter_quantity);
+		var database_selection_point_2 = parseInt(filter_quantity) * parseInt(filter_page_number);
 		var database_portion = window.database_results.split('\n').slice(database_selection_point_1, database_selection_point_2);
 		database_portion.reverse();
 		if (database_portion[0] === ''){
@@ -130,7 +131,31 @@ document.body.onload = create_content_list(filter_quantity, filter_page_number, 
 			document.getElementById('content').appendChild(entry_break);
 		}
 		//Create buttons for navigating to previous (if applicable), and next offset
-		
+		///Create previous button
+		if (page_number > 1) {
+			var previous_page_number = page_number - 1;
+			var url_previous_button = '/index.html' + '?keywords=' + keywords + '&types=' + types + '&page=' + previous_page_number + '&quantity=' + quantity;
+			var button_previous_button = document.createElement("a");
+			button_previous_button.className = "button_previous_button";
+			button_previous_button.setAttribute('href', url_previous_button);
+			button_previous_button.innerHTML = 'Previous';
+			///Add to DOM
+			document.getElementById('content').appendChild(button_previous_button);
+		}
+		///Create next button
+		if (database_portion.length < quantity) {
+			//Do nothing
+		} else {
+			var next_page_number = page_number;
+			next_page_number++;
+			var url_next_button = '/index.html' + '?keywords=' + keywords + '&types=' + types + '&page=' + next_page_number + '&quantity=' + quantity;
+			var button_next_button = document.createElement("a");
+			button_next_button.className = "button_next_button";
+			button_next_button.setAttribute('href', url_next_button);
+			button_next_button.innerHTML = 'Next';
+			///Add to DOM
+			document.getElementById('content').appendChild(button_next_button);
+		}
 	}
 }
 file_contents.open("GET", window.database_file_path, true);
